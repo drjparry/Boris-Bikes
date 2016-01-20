@@ -1,10 +1,18 @@
 require './lib/bike.rb'
 
-num_of_bikes = 60
-
 class DockingStation
+  attr_reader :bike
+
   def release_bike
     Bike.new
 
   end
-end
+
+  def dock(bike)
+    @bike = bike
+  end
+
+
+
+
+  end
