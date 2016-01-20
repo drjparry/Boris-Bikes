@@ -10,11 +10,22 @@ describe DockingStation do
 describe DockingStation do
   it {is_expected.to respond_to :release_bike}
 
+describe '#dock' do
+
   it 'returns docked bikes' do
     bike = Bike.new
     subject.dock(bike)
     expect(subject.bike).to eq bike
   end
+  it 'raises an error when capacity is full' do
+    bike = Bike.new
+    subject.dock(bike)
+    expect { subject.dock(bike) }.to raise_error 'full capacity'
+  end
+
+end
+
+
 
 describe '#release_bike' do
   it 'releases working bikes' do
