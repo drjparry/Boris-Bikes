@@ -23,7 +23,7 @@ describe Van do
     it "responds to 'collect with one argument'" do
       expect(subject).to respond_to(:collect).with(1).argument
     end
- 
+
     it 'collects fixed bikes from the garages' do
     station = DockingStation.new
     bike = Bike.new
@@ -33,9 +33,6 @@ describe Van do
     station.dock(bike)
     van.collect(station)
     van.deliver(garage)
-    #allow(garage).to receive(:initialize)
-    #allow(garage).to receive(:fixed_bikes=)
-    #allow(garage).to receive(:fixed_bikes)
     garage.fix_bikes
     van.collect(garage)
     expect(van.bike_hold).to eq [bike]
@@ -44,13 +41,21 @@ describe Van do
   end
 
   it 'collects broken bikes' do
-    allow(docking_station).to receive(:bikes).and_return([bike1, bike2, bike3])
-    expect(docking_station.bikes).to eq([bike1, bike2, bike3])
-    docking_station.bikes
-    expect(subject.collect(docking_station)).to eq [bike2, bike3]
+    bike1 = Bike.new
+    bike2 = Bike.new
+    bike3 = Bike.new
+    #allow(docking_station).to receive(:bikes).and_return([bike1, bike2, bike3])
+    station = DockingStation.new
+    bike1.report_broken
+    bike3.report_broken
+    station.dock(bike1)
+    station.dock(bike2)
+    station.dock(bike3)
+    subject.collect(station)
+    expect(subject.bike_hold).to eq [bike1, bike3]
   end
 
-  
+
 
 
 

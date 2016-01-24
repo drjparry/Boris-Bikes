@@ -10,12 +10,6 @@ describe DockingStation do
 		expect(subject.release_bike.working).to eq true
 	end
 
-
-
-
-
-
-
 	describe "#release_bike" do
 		it {is_expected.to respond_to :release_bike}
 
