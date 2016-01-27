@@ -1,3 +1,9 @@
+1. Week at MA
+2. What you’re building (in couple of words)
+3. Who you’re pairing with
+4. What you’re learning
+
+
 # Boris Bikes
 
 ## What is it?
