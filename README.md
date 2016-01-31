@@ -1,28 +1,17 @@
-Project Name: boris_bikes
+#Boris Bikes challenge - Week 2 Maker's Academy
 
-name of the projects and all sub-modules and libraries (sometimes they are named different and very confusing to new users)
+##What is it
 
-descriptions of all the project, and all sub-modules and libraries
+Boris Bikes is a bike tracking program that recreates the Boris Bikes bike hire system in London. It allows users to take and replace bikes in docking stations and report them broken when necessary. It also allows broken bikes to be picked up by vans, taken to a garage to be fixed, and once fixed returned to a docking station. 
 
-5-line code snippet on how its used (if it's a library)
+##This challenge was complete in conjunction with Russell Vaughan, Godfrey Chiu, Reisse Johnson, Yan Yi, and Frazer Watson. 
 
-copyright and licensing information (or "Read LICENSE")
+##Objectives: Main objectives this week were to practice Pair Programming, Test Driven Developement using RSPEC, and Object Oriented programming best practices such as the Single Responsibilty Principle. 
 
-instruction to grab the documentation
+##Approach
 
-instructions to install, configure, and to run the programs
+###Bike Class: responsible for creating bikes
+###Docking Station Class: responsible for docking and organising bikes and reporting them broken
+###Van class: responsible for picking up broken bikes and delivering them to garages to be fixex
+###Garage class: responsible for fixing bikes
 
-instruction to grab the latest code and detailed instructions to build it (or quick overview and "Read INSTALL")
-
-#list of authors or "Read AUTHORS"
---------------------------------- 
-Bjorn
-Douglas
-
-instructions to submit bugs, feature requests, submit patches, join mailing list, get announcements, or join the user or dev community in other forms
-
-other contact info (email address, website, company name, address, etc)
-
-a brief history if it's a replacement or a fork of something else
-
-legal notices (crypto stuff)
