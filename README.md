@@ -20,24 +20,7 @@ Garage class: responsible for fixing bikes
 ##Installation and use
 
 ```
-
-2.2.1 :010 > bike.report_broken
- => false 
-2.2.1 :011 > bike.working
- => false 
-2.2.1 :012 > docking_station.dock(bike)
- => [#<Bike:0x007fc05a19a0b0 @working=false>] 
-2.2.1 :013 > docking_station.bikes
- => [#<Bike:0x007fc05a19a0b0 @working=false>] 
-2.2.1 :014 > van.collect(docking_station)
- => [#<Bike:0x007fc05a19a0b0 @working=false>] 
-2.2.1 :015 > van.deliver(garage)
- => [] 
-2.2.1 :016 > garage.fix_bikes
- => [#<Bike:0x007fc05a19a0b0 @working=true>] 
-2.2.1 :017 > van.collect(garage)
- => [] 
-2.2.1 :018 2.2.1 :001 > require './lib/docking_station'
+2.2.1 :001 > require './lib/docking_station'
  => true 
 2.2.1 :002 > require './lib/van'
  => true 
@@ -54,7 +37,24 @@ Garage class: responsible for fixing bikes
 2.2.1 :008 > docking_station.release_bike
  => #<Bike:0x007fc05a19a0b0 @working=true> 
 2.2.1 :009 > docking_station.bikes
- => [] > van.deliver(docking_station)
+ => [] 
+2.2.1 :010 > bike.report_broken
+ => false 
+2.2.1 :011 > bike.working
+ => false 
+2.2.1 :012 > docking_station.dock(bike)
+ => [#<Bike:0x007fc05a19a0b0 @working=false>] 
+2.2.1 :013 > docking_station.bikes
+ => [#<Bike:0x007fc05a19a0b0 @working=false>] 
+2.2.1 :014 > van.collect(docking_station)
+ => [#<Bike:0x007fc05a19a0b0 @working=false>] 
+2.2.1 :015 > van.deliver(garage)
+ => [] 
+2.2.1 :016 > garage.fix_bikes
+ => [#<Bike:0x007fc05a19a0b0 @working=true>] 
+2.2.1 :017 > van.collect(garage)
+ => [] 
+2.2.1 :018 > van.deliver(docking_station)
  => [] 
 2.2.1 :019 >  docking_station.bikes
- => [#<Bike:0x007fc05a19a0b0 @working=true>]
+ => [#<Bike:0x007fc05a19a0b0 @working=true>] 
